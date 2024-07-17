@@ -1,0 +1,1 @@
+export const baseURL = "https://dockerhub-rea-apis.azurewebsites.net/";
