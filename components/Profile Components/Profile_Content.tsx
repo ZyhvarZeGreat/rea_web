@@ -2,14 +2,19 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Edit from "@/app/assets/edit_square.svg";
-import Heart from "@/app/assets/profile-icons/heart.svg";
+
 import Link from "next/link";
-import Settings from "@/app/assets/profile-icons/settings.svg";
-import Call from "@/app/assets/profile-icons/call.svg";
+
+
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Profile_Form from "@/components/Profile Components/Profile_Form";
 import { User } from "@/components/types/interfaces";
+import ProfileIcon from '@/public/profile-icons/profile.png'
+import SettingsIcon from '@/public/profile-icons/settings.png'
+import HeartIcon from '@/public/profile-icons/favorites.png'
+import CallIcon from '@/public/profile-icons/call.png'
+import Image from "next/image";
 
 type Props ={
   user:User
@@ -81,14 +86,19 @@ export const Profile_Content = ({user}:Props) => {
           className="flex w-full  flex-col items-center justify-center gap-4 rounded-xl bg-white px-4 py-4 lg:hidden ">
           <div
             className="flex w-full cursor-pointer items-center justify-start gap-2 rounded-xl px-4 py-4 hover:bg-[#F0EBFF]">
-            <Heart />
+  
+                    <Image className="h-4 w-4" src={HeartIcon} alt='ss' />
+                  
+                  
             <Link className="text-base text-[#6D6D6D]" href="profile/favorites">
               Favorites
             </Link>
           </div>
           <div
             className="flex w-full cursor-pointer items-center justify-start gap-2 rounded-xl px-4 py-4 hover:bg-[#F0EBFF]">
-            <Settings />
+   
+                    <Image className="h-4 w-4" src={SettingsIcon} alt='ss' />
+                  
             <Link
               className="text-base text-[#6D6D6D]"
               href="profile/account-settings"
@@ -99,7 +109,7 @@ export const Profile_Content = ({user}:Props) => {
           </div>
           <div
             className="flex w-full cursor-pointer items-center justify-start gap-2 rounded-xl px-4 py-4 hover:bg-[#F0EBFF]">
-            <Call />
+                           <Image className="h-4 w-4" src={CallIcon} alt='ss' />
             <Link
               className="text-base text-[#6D6D6D]"
               href="profile/help-center"

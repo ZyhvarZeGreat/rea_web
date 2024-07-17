@@ -17,6 +17,7 @@ type Props = { data?: Portfolio };
 const Asset_Cards = ({ data }: Props) => {
   const arr = Array.from({ length: 8 }, (_, index) => index);
   console.log(data);
+  
   return (
     <>
       {arr.map((item, i) => {

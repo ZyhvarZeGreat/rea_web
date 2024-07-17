@@ -5,7 +5,11 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 // import { Additem, Book, Briefcase, User } from "iconsax-react";
 // import { X } from "lucide-react";
-
+import ProfileIcon from '@/public/profile-icons/profile.png'
+import SettingsIcon from '@/public/profile-icons/settings.png'
+import HeartIcon from '@/public/profile-icons/favorites.png'
+import CallIcon from '@/public/profile-icons/call.png'
+import Image from "next/image";
 interface SidebarProps {
   baseUrl: string;
 }
@@ -107,7 +111,9 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
                 <MenuItem
                   route={`${baseUrl}` || `${baseUrl}/[slug]`}
                   name="My Profile"
-                  // icon={<Book className="h-5 w-5" />}
+                  icon={
+                    <Image className="h-4 w-4" src={ProfileIcon} alt='ss' />
+                  }
                 />
                 {/* <!-- Dropdown Menu End --> */}
               </React.Fragment>
@@ -119,16 +125,10 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
                 <MenuItem
                   route={`${baseUrl}/favorites`}
                   name="Favorites"
-                  // icon={
-                  //   <Additem
-                  //     className="h-5 w-5"
-                  //     color={
-                  //       pathname === `${baseUrl}/favorites`
-                  //         ? "#40048F"
-                  //         : " #8a8a8a"
-                  //     }
-                  //   />
-                  // }
+                  icon={
+                    <Image className="h-4 w-4" src={HeartIcon} alt='ss' />
+                  
+                  }
                 />
               </li>
               {/* <!-- Menu Item Calendar --> */}
@@ -138,16 +138,9 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
                 <MenuItem
                   route={`${baseUrl}/account-settings`}
                   name="Account Settings"
-                  // icon={
-                  //   <Briefcase
-                  //     className="h-5 w-5"
-                  //     color={
-                  //       pathname === `${baseUrl}/account-settings`
-                  //         ? "#40048F"
-                  //         : " #8a8a8a"
-                  //     }
-                  //   />
-                  // }
+                  icon={
+                    <Image className="h-4 w-4" src={SettingsIcon} alt='ss' />
+                  }
                 />
               </li>
 
@@ -155,16 +148,9 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
                 <MenuItem
                   route={`${baseUrl}/help-center`}
                   name="Help Center"
-                  // icon={
-                  //   <User
-                  //     className="h-5 w-5"
-                  //     color={
-                  //       pathname === `${baseUrl}/help-center`
-                  //         ? "#40048F"
-                  //         : " #8a8a8a"
-                  //     }
-                  //   />
-                  // }
+                  icon={
+                    <Image className="h-4 w-4" src={CallIcon} alt='ss' />
+                  }
                 />
               </li>
             </ul>

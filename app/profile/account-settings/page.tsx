@@ -1,11 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
-// import { ShieldSecurity } from "iconsax-react";
+import ChangeIcon from '@/public/change-transction.png'
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { BackButton } from "@/components/common/BackButton";
+import Image from "next/image";
 
 
 const  Profile_Account_Settings_Drawer  = dynamic(() => import('@/components/Profile Components/Profile_Account_Settings_Drawer'), {
@@ -42,7 +43,7 @@ const Profile = () => {
               setShowPinInput(!showPinInput);
             }}
           >
-            {/*<ShieldSecurity size={24} variant="Bulk" className=" p-0 " />*/}
+                 <Image className="h-4 w-4" src={ChangeIcon} alt='ss' />
             <h3>Change Transaction Pin</h3>
           </Button>
           {showPinInput && (

@@ -9,6 +9,7 @@ import { PortfolioNew, User } from "@/components/types/interfaces";
 import { getUsers } from "@/lib/queryFunctions";
 import TextSkeleton from "@/components/common/Skeletons/TextSkeleton";
 import Image from "next/image";
+import { LineChartComponent } from "./LineChartComponent";
 
 type Props = {
   showAssets: boolean;
@@ -29,26 +30,7 @@ const Portfolio_Breakdown = ({ metrics, showAssets, setShowAssets }: Props) => {
   });
 
 
-  // const generateData = (
-  //   length: number,
-  //   minChange: number,
-  //   maxChange: number
-  // ) => {
-  //   let data = [];
-  //   let uv = 1000; // starting value for uv
-  //
-  //   for (let i = 0; i < length; i++) {
-  //     // Random change between -maxChange and maxChange
-  //     let change = Math.floor(Math.random() * (2 * maxChange + 1)) - maxChange;
-  //     // Ensure the value doesn't drop below a certain threshold to maintain the overall upward trend
-  //     uv = Math.max(uv + change, uv + minChange);
-  //     data.push({ name: `Point ${i + 1}`, uv });
-  //   }
-  //
-  //   return data;
-  // };
-  // const data = generateData(40, 2, 1500);
-
+  
 
   return (
     <div className="flex w-full items-center justify-center ">
@@ -88,21 +70,7 @@ const Portfolio_Breakdown = ({ metrics, showAssets, setShowAssets }: Props) => {
           <div className="mr-6 flex  items-center justify-center ">
 
 
-            {/*<LineChart height={50} width={90} data={data}>*/}
-            {/*  <Line*/}
-            {/*    dataKey="uv"*/}
-            {/*    strokeWidth={3}*/}
-            {/*    dot={false}*/}
-            {/*    stroke="url(#colorUv)"*/}
-            {/*  />*/}
-            {/*  <defs>*/}
-            {/*    <linearGradient id="colorUv" x1="0" y1="0" x2="1" y2="0">*/}
-            {/*      <stop offset="32%" stopColor="#FFFFFF" stopOpacity={1} />*/}
-            {/*      <stop offset="88%" stopColor="#13EF29" stopOpacity={1} />*/}
-            {/*    </linearGradient>*/}
-            {/*  </defs>*/}
-            {/*</LineChart>*/}
-
+          <LineChartComponent/>
           </div>
         </div>
 
@@ -136,20 +104,8 @@ const Portfolio_Breakdown = ({ metrics, showAssets, setShowAssets }: Props) => {
             </div>
           </div>
           <div className="flex  items-center justify-center ">
-            {/*<LineChart height={85} width={140} data={data}>*/}
-            {/*  <Line*/}
-            {/*    dataKey="uv"*/}
-            {/*    strokeWidth={3}*/}
-            {/*    dot={false}*/}
-            {/*    stroke="url(#colorUv)"*/}
-            {/*  />*/}
-            {/*  <defs>*/}
-            {/*    <linearGradient id="colorUv" x1="0" y1="0" x2="1" y2="0">*/}
-            {/*      <stop offset="32%" stopColor="#FFFFFF" stopOpacity={1} />*/}
-            {/*      <stop offset="88%" stopColor="#13EF29" stopOpacity={1} />*/}
-            {/*    </linearGradient>*/}
-            {/*  </defs>*/}
-            {/*</LineChart>*/}
+          <LineChartComponent/>
+          
           </div>
         </div>
 

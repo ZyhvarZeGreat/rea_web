@@ -108,7 +108,7 @@ export const Rea_Home_Slider = () => {
         </div>
 
         <div className="absolute hidden h-3/5 w-full lg:block">
-          <Slider orientation="vertical"/>
+          {/* <Slider orientation="vertical"/>y */}
         </div>
 
         <div className=" hidden w-full flex-row items-center justify-center gap-2 self-center px-8 py-4 xs:flex-col sm:z-50 sm:flex sm:max-w-2xl    sm:items-start sm:justify-between sm:gap-8 sm:px-0 sm:py-0  lg:h-3/5 lg:max-w-full  lg:basis-1/2  lg:py-12">

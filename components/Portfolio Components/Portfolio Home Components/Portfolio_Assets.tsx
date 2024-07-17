@@ -1,9 +1,10 @@
 import { Input } from "@/components/ui/input";
 // import { Search } from "lucide-react";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Asset_Cards from "./Asset_Cards";
 
 import Asset_Card_Skeleton from "./Asset_Card_Skeleton";
+import getResources from "@/lib/getBlurResources";
 
 // type Props = {
 //   portfolio:Portfolio;
@@ -11,6 +12,10 @@ import Asset_Card_Skeleton from "./Asset_Card_Skeleton";
 // };
 
 const Portfolio_Assets = () => {
+  const [imagesSet, setImagesSet] = useState<any>([]);
+
+
+  
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4 rounded-lg px-2 py-6 lg:px-8">
       <div className="relative flex w-full  py-6 ">
