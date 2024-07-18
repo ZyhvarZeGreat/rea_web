@@ -28,7 +28,7 @@ const Rea_Home_Hero = async () => {
           <div className="flex w-full gap-6 mt-[28px] sm:mt-0  sm:w-auto">
             <Link
               href="/signup"
-              className="  flex px-[15px] px-[10px] sm:h-14 sm:w-36 items-center  justify-center rounded-[10px] bg-black  text-center text-sm sm:text-base font-medium text-white hover:bg-black/90  hover:text-white lg:text-lg"
+              className="  flex px-[15px] py-[10px] sm:h-14 sm:w-36 items-center  justify-center rounded-[10px] bg-black  text-center text-sm sm:text-base font-medium text-white hover:bg-black/90  hover:text-white lg:text-lg"
             >
               {" "}
               Get started
@@ -45,8 +45,8 @@ const Rea_Home_Hero = async () => {
         <div
           className="relative flex h-[30rem] sm:h-full basis-full items-center justify-center xl:mt-8 xl:basis-1/2  ">
            <Image
-             // placeholder="blur"
-             // blurDataURL={base64}
+             placeholder="blur"
+             blurDataURL={base64}
             priority
             sizes="(max-width:768px) 100vw ,
                (max-width:1200px),50vw,33vw
