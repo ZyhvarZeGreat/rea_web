@@ -6,16 +6,17 @@ import { getUsers } from "@/lib/queryFunctions";
 
 const Navbar = async  () => {
 
-   const user = await getUsers()
+  //  const user = await getUsers()
 
     return (
     <div className=" ">
-      {/*<UnAuthenticatedNavbar />*/}
+      {/* <UnAuthenticatedNavbar />
       { user&& user ?    (
         <AuthenticatedNavbar user={user} />
       ) : (
         <UnAuthenticatedNavbar />
-      )}
+      )} */}
+            <UnAuthenticatedNavbar />
     </div>
   );
 };
