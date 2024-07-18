@@ -45,8 +45,8 @@ const Rea_Home_Hero = async () => {
         <div
           className="relative flex h-[30rem] sm:h-full basis-full items-center justify-center xl:mt-8 xl:basis-1/2  ">
            <Image
-             placeholder="blur"
-             blurDataURL={base64}
+            //  placeholder="blur"
+            //  blurDataURL={base64}
             priority
             sizes="(max-width:768px) 100vw ,
                (max-width:1200px),50vw,33vw
