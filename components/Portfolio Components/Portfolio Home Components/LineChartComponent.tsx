@@ -47,7 +47,7 @@ export function LineChartComponent() {
 
   return (
     
-        <ChartContainer className="min-h-[150px] w-full" config={chartConfig}>
+        <ChartContainer className=" w-auto min-h-[80px]  xs:min-h-[150px] xs:w-full" config={chartConfig}>
           <LineChart
             accessibilityLayer
             data={data}

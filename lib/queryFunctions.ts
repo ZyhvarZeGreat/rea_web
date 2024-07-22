@@ -21,8 +21,7 @@ export const getUsers = async (): Promise<User | undefined> => {
   } catch (error) {
     if (error instanceof AxiosError) {
       console.error(error.message, error.code);
-       throw new Error(error.message)
-
+       
     }
   }
 };

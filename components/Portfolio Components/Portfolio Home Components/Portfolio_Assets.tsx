@@ -1,5 +1,4 @@
 import { Input } from "@/components/ui/input";
-// import { Search } from "lucide-react";
 import React, { Suspense, useEffect, useState } from "react";
 import Asset_Cards from "./Asset_Cards";
 
@@ -12,7 +11,7 @@ import getResources from "@/lib/getBlurResources";
 // };
 
 const Portfolio_Assets = () => {
-  const [imagesSet, setImagesSet] = useState<any>([]);
+  
 
 
   

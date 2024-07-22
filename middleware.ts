@@ -13,19 +13,19 @@ export async function middleware(request: NextRequest) {
   //     request.nextUrl.pathname.startsWith(route),
   //   );
   //   console.log("Is Protected Route:", isProtectedRoute); // Debug log
-  
+  //
   //   if (!session && isProtectedRoute) {
   //     console.log("Redirecting due to missing session"); // Debug log
   //     const redirectURL = new URL("/login", request.nextUrl.origin);
   //     redirectURL.searchParams.set("redirected", "true");
   //     return NextResponse.redirect(redirectURL.toString());
   //   }
-  
+  //
   //   if (session && typeof session !== "string") {
   //     console.log("Updating session"); // Debug log
   //     await updateSession(request);
   //   }
-  
+  //
   //   return NextResponse.next();
   // } catch (error: unknown) {
   //   console.error("Middleware error:", error);

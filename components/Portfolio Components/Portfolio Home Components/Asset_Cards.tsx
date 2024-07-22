@@ -7,11 +7,11 @@ import { Dialog, DialogContent, DialogFooter, DialogTrigger } from "@/components
 
 import { Portfolio } from "@/components/types/interfaces";
 import { Separator } from "@/components/ui/separator";
-// import { Separator, Progress } from "@nextui-org/react";
-// import { Document, DocumentDownload } from "iconsax-react";
+import { Progress } from "@/components/ui/progress"
 import Link from "next/link";
 import { DialogDescription } from "@radix-ui/react-dialog";
-
+import DocumentDownload from "@/public/document-download.png";
+import DocumentText from "@/public/document-text.png";
 type Props = { data?: Portfolio };
 
 const Asset_Cards = ({ data }: Props) => {
@@ -24,10 +24,10 @@ const Asset_Cards = ({ data }: Props) => {
         return (
           <div
             key={i}
-            className=" col-span-12 flex   w-full  items-center justify-center  xs:col-span-10 xs:ml-24  sm:col-span-10 sm:ml-32   md:col-span-6   md:ml-0   xl:col-span-4   2xl:col-span-3 "
+            className=" col-span-12  flex   w-full  items-center justify-center  xs:col-span-10 xs:ml-24  sm:col-span-10 sm:ml-32   md:col-span-6   md:ml-0   xl:col-span-4   2xl:col-span-3 "
           >
             <Card className="w-full shadow-lg">
-              {/*THIS OVERLAY IS FOR  THE TABLETS AND DESKTOPS*/}
+              {/* THIS OVERLAY IS FOR  THE TABLETS AND DESKTOPS */}
               <Dialog>
                 <DialogTrigger className="hidden w-full xs:block ">
                   <CardContent className="h-[25rem] w-full p-0">
@@ -192,78 +192,39 @@ const Asset_Cards = ({ data }: Props) => {
                     </div>
 
                     <div className="flex w-full flex-col  items-center justify-center gap-6 text-center   ">
-                      <h2 className="text-lg font-semibold">
+                      <h2 className="text-lg py-6 font-semibold">
                         Building Details
                       </h2>
-                      {/*<div className=" flex w-full grid-cols-12 flex-col items-center justify-center gap-4 text-base text-[#6D6D6D] lg:grid">*/}
-                      {/*  <Progress*/}
-                      {/*    label="Building Structure"*/}
-                      {/*    value={100}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*  <Progress*/}
-                      {/*    label="Security"*/}
-                      {/*    value={100}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*  <Progress*/}
-                      {/*    label="Power"*/}
-                      {/*    value={80}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*  <Progress*/}
-                      {/*    label="Internet Connectivity"*/}
-                      {/*    value={100}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*</div>*/}
+                       <div className=" flex w-[70%]  grid-cols-12 flex-col items-center justify-center gap-4 text-base text-[#6D6D6D] lg:grid">
+                        <Progress
+                          // label="Building Structure"
+                          value={100}
+                          className="col-span-12  rounded-none "
+                         
+                        
+                        />
+                        <Progress
+                          // label="Security"
+                          value={100}
+                          className="col-span-12  rounded-none "
+                         
+                       
+                        />
+                        <Progress
+                          // label="Power"
+                          value={80}
+                              className="col-span-12  rounded-none "
+                      
+                        
+                        />
+                        <Progress
+                          // label="Internet Connectivity"
+                          value={100}
+                          className="col-span-12  rounded-none "
+                         
+                        
+                        />
+                      </div> 
                     </div>
                     <div className=" flex flex-col items-center gap-4 text-center  ">
                       <h3 className=" text-lg font-semibold ">
@@ -276,27 +237,37 @@ const Asset_Cards = ({ data }: Props) => {
                       >
                         {" "}
                         <div className="flex w-full flex-col items-center  justify-around gap-8 rounded-lg p-4 text-[#494949]  ">
-                          <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
-                            <div className="flex gap-2">
-                              {/*<Document />*/}
-                              <Link href={"#"}> Get Your Documents</Link>
-                            </div>
-                            {/*<DocumentDownload variant="Bulk" color="#8459FF" />*/}
-                          </div>
-                          <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
-                            <div className="flex gap-2">
-                              {/*<Document />*/}
-                              <Link href={"#"}> Get Your Documents</Link>
-                            </div>
-                            {/*<DocumentDownload variant="Bulk" color="#8459FF" />*/}
-                          </div>
-                          <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
-                            <div className="flex gap-2">
-                              {/*<Document />*/}
-                              <Link href={"#"}> Get Your Documents</Link>
-                            </div>
-                            {/*<DocumentDownload variant="Bulk" color="#8459FF" />*/}
-                          </div>
+                         
+                        <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
+                    <div className="flex gap-2">
+                      <Image className="h-6 w-auto" src={DocumentText} alt={""} />
+                      <Link href={`#`}> Get Your Documents</Link>
+                    </div>
+                    <Image className="h-6 w-auto" src={DocumentDownload} alt={""} />
+                  </div>
+                  <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
+                    <div className="flex gap-2">
+                      <Image className="h-6 w-auto" src={DocumentText} alt={""} />
+                      <Link href={`#`}> Get Your Documents</Link>
+                    </div>
+                    <Image className="h-6 w-auto" src={DocumentDownload} alt={""} />
+                  </div>
+                  <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
+                    <div className="flex gap-2">
+                      <Image className="h-6 w-auto" src={DocumentText} alt={""} />
+                      <Link href={`#`}> Get Your Documents</Link>
+                    </div>
+                    <Image className="h-6 w-auto" src={DocumentDownload} alt={""} />
+                  </div>
+                  <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
+                    <div className="flex gap-2">
+                      <Image className="h-6 w-auto" src={DocumentText} alt={""} />
+                      <Link href={`#`}> Get Your Documents</Link>
+                    </div>
+                    <Image className="h-6 w-auto" src={DocumentDownload} alt={""} />
+                  </div>
+                         
+                         
                         </div>
                       </div>
                     </div>
@@ -375,7 +346,7 @@ const Asset_Cards = ({ data }: Props) => {
                 </DialogContent>
               </Dialog>
 
-                {/*THIS OVERLAY IS FOR THE MOBILE VIEW THE ONE ABOVE IS FOR TABLETS AND DESKTOPS*/}
+                {/* THIS OVERLAY IS FOR THE MOBILE VIEW THE ONE ABOVE IS FOR TABLETS AND DESKTOPS */}
 
               <Dialog>
                 <DialogTrigger className="block w-full xs:hidden">
@@ -547,75 +518,35 @@ const Asset_Cards = ({ data }: Props) => {
                       <h2 className="text-lg font-semibold">
                         Building Details
                       </h2>
-                      {/*<div className=" flex w-full grid-cols-12 flex-col items-center justify-center gap-4 text-base text-[#6D6D6D] lg:grid">*/}
-                      {/*  <Progress*/}
-                      {/*    label="Building Structure"*/}
-                      {/*    value={100}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*  <Progress*/}
-                      {/*    label="Security"*/}
-                      {/*    value={100}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*  <Progress*/}
-                      {/*    label="Power"*/}
-                      {/*    value={80}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*  <Progress*/}
-                      {/*    label="Internet Connectivity"*/}
-                      {/*    value={100}*/}
-                      {/*    maxValue={100}*/}
-                      {/*    formatOptions={{ style: "percent" }}*/}
-                      {/*    radius="none"*/}
-                      {/*    showValueLabel={true}*/}
-                      {/*    classNames={{*/}
-                      {/*      base: "max-w-md  lg:col-span-6",*/}
-                      {/*      track: "h-2 rounded-[2px]",*/}
-
-                      {/*      indicator: "bg-[#4E23CB]",*/}
-                      {/*      label:*/}
-                      {/*        "tracking-wider text-sm font-medium text-[#6d6d6d]",*/}
-                      {/*      value: "text-foreground/60",*/}
-                      {/*    }}*/}
-                      {/*  />*/}
-                      {/*</div>*/}
+                      <div className=" flex w-full grid-cols-12 flex-col items-center justify-center gap-4 text-base text-[#6D6D6D] lg:grid">
+                        <Progress
+                          // label="Building Structure"
+                          value={100}
+                          className="col-span-12  rounded-none "
+                         
+                        
+                        />
+                        <Progress
+                          // label="Security"
+                          value={100}
+                          className="col-span-12  rounded-none "
+                         
+                       
+                        />
+                        <Progress
+                          // label="Power"
+                          value={80}
+                         
+                        
+                        />
+                        <Progress
+                          // label="Internet Connectivity"
+                          value={100}
+                          className="col-span-12  rounded-none "
+                         
+                        
+                        />
+                      </div>
                     </div>
                     <div className=" flex flex-col items-center gap-4 text-center  ">
                       <h3 className=" text-lg font-semibold ">
@@ -628,27 +559,9 @@ const Asset_Cards = ({ data }: Props) => {
                       >
                         {" "}
                         <div className="flex w-full flex-col items-center  justify-around gap-8 rounded-lg p-4 text-[#494949]  ">
-                          <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
-                            <div className="flex gap-2">
-                              {/*<Document />*/}
-                              <Link href={"#"}> Get Your Documents</Link>
-                            </div>
-                            {/*<DocumentDownload variant="Bulk" color="#8459FF" />*/}
-                          </div>
-                          <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
-                            <div className="flex gap-2">
-                              {/*<Document />*/}
-                              <Link href={"#"}> Get Your Documents</Link>
-                            </div>
-                            {/*<DocumentDownload variant="Bulk" color="#8459FF" />*/}
-                          </div>
-                          <div className="flex w-full items-center justify-between  border-b border-b-[#9C9898] py-2">
-                            <div className="flex gap-2">
-                              {/*<Document />*/}
-                              <Link href={"#"}> Get Your Documents</Link>
-                            </div>
-                            {/*<DocumentDownload variant="Bulk" color="#8459FF" />*/}
-                          </div>
+                         
+                         
+                         
                         </div>
                       </div>
                     </div>

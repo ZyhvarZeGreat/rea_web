@@ -480,36 +480,7 @@ export const Property_Details_Content = ({details,properties}:Props) => {
                 <div className="flex  w-full flex-col items-center justify-between gap-4">
                   <LazyLoad className={"w-full"}>
                     <div className="flex w-full flex-col gap-6">
-
-
-                      {/*<Slider*/}
-                      {/*  size="sm"*/}
-                      {/*  className="h-full w-full  "*/}
-                      {/*  step={20}*/}
-                      {/*  maxValue={Number(details?.costs?.total_costs)}*/}
-                      {/*  minValue={0}*/}
-                      {/*  aria-label="slider"*/}
-                      {/*  defaultValue={0}*/}
-                      {/*  showOutline*/}
-                      {/*  aria-labelledby="slider"*/}
-                      {/*  label={`₦${sliderValue?.toLocaleString()}`}*/}
-                      {/*  // getValue={(value) => {*/}
-                      {/*  //  setSliderValue(value);*/}
-                      {/*  // }}*/}
-                      {/*  classNames={{*/}
-                      {/*    base: ["ring-[#4E23CB]  ease-in"],*/}
-                      {/*    filler: ["bg-[#8459FF]"],*/}
-                      {/*    track: ["w-full h-2"],*/}
-                      {/*    label:*/}
-                      {/*      "font-medium text-lg font-semibold  text-[#4E23CB] "*/}
-                      {/*  }}*/}
-                      {/*  renderThumb={(props) => (*/}
-                      {/*    <div*/}
-                      {/*      {...props}*/}
-                      {/*      className="group top-1/2 cursor-grab rounded-full bg-[#4E23CB] p-3 shadow-medium "*/}
-                      {/*    ></div>*/}
-                      {/*  )}*/}
-                      {/*/>*/}
+                    
                       <div className={"w-full"}>
                         <Slider
                           defaultValue={[0]}

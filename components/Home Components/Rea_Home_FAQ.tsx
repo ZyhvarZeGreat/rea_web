@@ -1,6 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 // import { ChevronDown } from "lucide-react";
-
+import FaqIcon from '@/public/faq.png'
+import Image from "next/image";
  const Rea_Home_FAQ = async () => {
   return (
 
@@ -14,16 +15,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
           className="flex w-full flex-col gap-4"
         >
           <AccordionItem
-            className="border-b-[1.2px] border-black/40 px-4 py-1"
+            className="border-b-[1.2px]  px-4 py-1"
             value="item-1"
           >
             <AccordionTrigger className=" text-start text-lg sm:text-xl">
               How does REA work?
-              <div className="flex items-center justify-center rounded-full bg-black p-1">
-                {/*<ChevronDown*/}
-                {/*  color="white"*/}
-                {/*  className="h-6 w-6  shrink-0 rounded-full  transition-transform duration-200 "*/}
-                {/*/>*/}
+              <div className="flex items-center justify-center rounded-full  p-1">
+                 <Image className='w-6 h-6'  src={FaqIcon} alt='' />
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg">
@@ -31,16 +29,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
-            className="border-b-[1.2px] border-black/40 px-4 py-1"
+            className="border-b-[1.2px]  px-4 py-1"
             value="item-2"
           >
             <AccordionTrigger className=" text-start text-lg sm:text-xl">
               Is my investment safe with REA?
-              <div className="flex items-center justify-center rounded-full bg-black p-1">
-                {/*/!*<ChevronDown*!/*/}
-                {/*  color="white"*/}
-                {/*  className="h-6 w-6  shrink-0 rounded-full  transition-transform duration-200 "*/}
-                {/*/>*/}
+              <div className="flex items-center justify-center rounded-full  p-1">
+              <Image className='w-6 h-6'  src={FaqIcon} alt='' />
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg">
@@ -49,16 +44,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
-            className="border-b-[1.2px] border-black/40 px-4 py-1"
+            className="border-b-[1.2px]  px-4 py-1"
             value="item-3"
           >
             <AccordionTrigger className=" text-start text-lg sm:text-xl">
               What is the minimum investment amount?
-              <div className="flex items-center justify-center rounded-full bg-black p-1">
-                {/*<ChevronDown*/}
-                {/*  color="white"*/}
-                {/*  className="h-6 w-6  shrink-0 rounded-full  transition-transform duration-200 "*/}
-                {/*/>*/}
+              <div className="flex items-center justify-center rounded-full  p-1">
+                 <Image className='w-6 h-6'  src={FaqIcon} alt='' />
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg">
@@ -67,16 +59,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
-            className="border-b-[1.2px] border-black/40 px-4 py-1"
+            className="border-b-[1.2px]  px-4 py-1"
             value="item-4"
           >
             <AccordionTrigger className=" text-start text-lg sm:text-xl">
               How often do I receive returns on my investment?
-              <div className="flex items-center justify-center rounded-full bg-black p-1">
-                {/*<ChevronDown*/}
-                {/*  color="white"*/}
-                {/*  className="h-6 w-6  shrink-0 rounded-full  transition-transform duration-200 "*/}
-                {/*/>*/}
+              <div className="flex items-center justify-center rounded-full  p-1">
+                 <Image className='w-6 h-6'  src={FaqIcon} alt='' />
               </div>
             </AccordionTrigger>
             <AccordionContent className="text-lg">
